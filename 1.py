@@ -69,4 +69,19 @@ else:
     print('неверно\n')
     count -= 1
     print(str(count) + ' - 1 очко\n')
+
+print('6. Какой материк пересекается всеми меридианами \n а)Евразия \n б)Африка \n с)Антарктида \n г)Австралия')
+answer6 = input('Ответ:\n ')
+if str(answer6) == 'с' or str(answer6) == 'С':
+    print('правильно\n')
+    count += 1
+    print(str(count) + ' + 1 очко\n')
+elif len(answer6) == 0:
+    print('вы ничего не написали\n')
+    print(str(count) + ' + ничего\n')
+else:
+    print('неверно\n')
+    count -= 1
+    print(str(count) + ' - 1 очко\n')
+
 print(f'конец викторины\n - вот очки \n - {count}')
