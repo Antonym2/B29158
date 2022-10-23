@@ -42,3 +42,9 @@ while True:
             c_score += 1
             fc_score += 1
         print(f"Общий счёт: у вас {p_score} у компьютера {c_score}")
+    elif player == "выйти":
+        print(f"Общий финальный счёт: у вас {fp_score}\n у компьютера {fc_score}")
+        break
+    else:
+        print("произошла ошибка...")
+        player = input("Выберите: \nкамень (к), \nбумага(б), или \nножницы(н) \n(выйти) ? \n")
