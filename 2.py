@@ -22,3 +22,23 @@ while True:
             c_score += 1
             fc_score += 1
         print(f"Общий счёт: у вас {p_score} у компьютера {c_score}")
+    elif player == "бумага" or player == "б":
+        if computer == "камень":
+            print("Ты победил!")
+            p_score += 1
+            fp_score += 1
+        else:
+            print("Победил компьютер!")
+            c_score += 1
+            fc_score += 1
+        print(f"Общий счёт: у вас {p_score} у компьютера {c_score}")
+    elif player == "ножницы" or player == "н":
+        if computer == "бумага":
+            print("Ты победил!")
+            p_score += 1
+            fp_score += 1
+        else:
+            print("Победил компьютер!")
+            c_score += 1
+            fc_score += 1
+        print(f"Общий счёт: у вас {p_score} у компьютера {c_score}")
