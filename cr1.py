@@ -1,4 +1,6 @@
+import random
 class Character:
+    dodge_chance = 0
     agility = 1
     strength = 1
     intellect = 1
@@ -6,8 +8,8 @@ class Character:
     m_stat_name = ""
     m_stat = 1
     name = ""
-    health = 100 * (strength / 10)
-    damage = 1 * (m_stat / 10)
+    health = 100 * (strength / 10) * (level/5)
+    damage = 1 * (m_stat / 10) * (level/5)
     defence = 1 * (agility / 10)
     dodge = 0
     mana = 50 * (intellect / 20)
@@ -32,11 +34,28 @@ class Character:
                f"Сила - {self.strength}\n" \
                f"Ловкость - {self.agility}\n" \
                f"Интелект - {self.intellect}\n" \
-               f"Урон - {self.damage}\n " \
+               f"Урон - {self.damage}\n" \
                f"Мана - {self.mana}\n" \
                f"Основной Стат - {self.m_stat_name}\n" \
                f"Броня - {self.defence}\n" \
-               f"Шанс уаорота - {self.dodge}\n"
+               f"Шанс уворота - {self.dodge}\n"
+
+    def roll_damage(self):
+        return random.randint(self.damage-20, self.damage+20)
+
+    def take_damage(self, roll_damage):
+        self.health -= max(roll_damage, 0)
+
+    def attack(self, player):
+        player.take_damage(self.roll_damage)
+
+    def roll_defece(self):
+        return random.randint(0, self.defence)
+
+
+
+
+
 
 
 
