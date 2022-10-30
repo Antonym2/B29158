@@ -1,5 +1,5 @@
 from cr1 import Character
-player1 = Character(name="Phantom Asasin", agility=34, strength=12, intellect=8, health=500, damage=105, defence=8, level=1, dodge=51, mana=120, m_stat_name="agility", m_stat=34, to_next_level=10)
+player1 = Character(name="Phantom Asasin", agility=34, strength=12, intellect=8, health=500, damage=105, defence=8, level=1, dodge=20, mana=120, m_stat_name="agility", m_stat=34, to_next_level=10)
 
 player2 = Character(name="Axe", agility=11, strength=38, intellect=8, health=860, damage=79, defence=9, level=1, dodge=0, mana=80, m_stat_name="strength", m_stat=38, to_next_level=10)
 

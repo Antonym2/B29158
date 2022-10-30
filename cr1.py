@@ -47,7 +47,7 @@ class Character:
 
     def attack(self, player):
         dodge_chance = random.randint(0, 100)
-        if dodge_chance > self.dodge:
+        if dodge_chance < player.dodge:
             player.take_damage(0)
         else:
             player.take_damage(self.damage)
