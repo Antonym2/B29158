@@ -46,9 +46,10 @@ class Character:
             self.health -= damage
 
     def attack(self, player):
-        dodge_chance = random.randint(0, 100)
+        dodge_chance = random.randint(1, 100)
         if dodge_chance < player.dodge:
             player.take_damage(0)
+            print(f"Уворот так как dodge_chance {dodge_chance} < player.dodge {player.dodge}")
         else:
             player.take_damage(self.damage)
 
