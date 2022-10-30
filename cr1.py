@@ -44,7 +44,7 @@ class Character:
         return random.randint(self.damage-20, self.damage+20)
 
     def take_damage(self, roll_damage):
-        self.health -= max(roll_damage, 0)
+        self.health - max(roll_damage, 0)
 
     def attack(self, player):
         player.take_damage(self.roll_damage)
