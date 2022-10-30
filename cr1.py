@@ -42,8 +42,15 @@ class Character:
                f"Броня - {self.defence}\n" \
                f"Шанс уворота - {self.dodge}\n"
 
+    def is_alive(self):
+        if self.health > 0:
+            print(f"Жив(ая) - {self.name}")
+        else:
+            print(f"Погиб - {self.name}")
+
     def take_damage(self, damage):
             self.health -= damage
+
 
     def attack(self, player):
         dodge_chance = random.randint(1, 100)
@@ -51,7 +58,10 @@ class Character:
             player.take_damage(0)
             print(f"Уворот так как dodge_chance {dodge_chance} < player.dodge {player.dodge}")
         else:
-            player.take_damage(self.damage)
+            if player.defence > self.damage:
+                player.take_damage(0)
+            else:
+                player.take_damage(self.damage - player.defence)
 
 
 
